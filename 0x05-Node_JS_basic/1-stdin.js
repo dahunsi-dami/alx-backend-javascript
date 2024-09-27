@@ -12,7 +12,7 @@ process.stdin.on('readable', () => {
     process.exit();
   }
 
-  process.on('exit', () => {
+/*  process.on('exit', () => {
     process.stdout.write('This important software is now closing\n');
-  });
+  }); */
 });
