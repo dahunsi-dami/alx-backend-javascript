@@ -8,9 +8,9 @@ process.stdin.on('readable', () => {
     process.stdout.write(`Your name is: ${name}`);
     if (!process.stdin.isTTY) {
       process.stdout.write('This important software is now closing\n');
+    }
+    process.exit();
   }
-  process.exit();
-}
 
   process.on('exit', () => {
     process.stdout.write('This important software is now closing\n');
