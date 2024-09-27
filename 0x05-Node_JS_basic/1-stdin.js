@@ -6,7 +6,7 @@ process.stdin.on('readable', () => {
   if (readline) {
     const name = readline.toString();
     process.stdout.write(`Your name is: ${name}`);
-    if (!process.stdin.isTTY) {
+    if (!process.stdin.isTTY && process.argv.length >= 2) {
       process.stdout.write('This important software is now closing\n');
     }
     process.exit();
